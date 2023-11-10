@@ -1,0 +1,171 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('70019790.jpg');
+    width: 90%;
+    max-width: 900px;
+    margin:auto;
+    color: white;
+}
+
+main{
+    background-color: #0B771A;
+}
+
+h1{
+    text-align: center;
+}
+
+header, nav, article, aside, footer{
+    border:1px solid black;
+    padding: 10px;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: 
+        "h h h"
+        "n n n"
+        "b a j"
+        "f f f"
+    ;
+    gap:10px;
+}
+
+
+header{
+    grid-area:h;
+}
+
+nav{
+    grid-area:n;
+}
+
+article{
+    grid-area:a;
+}
+
+footer{
+    grid-area:f;
+}
+
+aside#bal{
+    grid-area:b;
+}
+
+aside#jobb{
+    grid-area:j;
+}
+
+img{
+    width: 100%;
+}
+
+article{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3px;
+}
+
+ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    list-style-type: none;
+    gap: 20px;
+}
+
+li{
+    text-align: center;
+}
+
+nav ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+nav li a{
+    text-decoration: none;
+    color: white;
+}
+
+nav li:hover{
+    background-color: #003D08;
+}
+
+p{
+    padding: 5px;
+    padding-top: 10px;
+    text-align: justify;
+}
+
+div#elsodiv{
+    border: 1px solid black;
+    padding: 2px;
+    
+}
+
+div#masodikdiv{
+    border: 1px solid black;
+    padding: 2px;
+    
+}
+
+div#harmadikdiv{
+    border: 1px solid black;
+    padding: 2px;
+    
+}
+
+@media screen and (max-width: 700px) {
+    body {
+      background-color: #1B4E21;
+      width: 100%;
+      font-size: 3vw;
+    }
+    main{
+        grid-template-columns:2fr 1fr;
+        grid-template-areas: 
+            "h h"
+            "n n"
+            "a b"
+            "j j"
+            "f f";
+    }
+    article{
+        grid-template-columns: 2fr 2fr;
+    }
+    
+}
+
+@media screen and (max-width: 450px) {
+    nav ul{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    body {
+      background-color: #1B4E21;
+      width: 100%;
+      font-size: 5vw;
+    }
+    main{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "h"
+            "n"
+            "a"
+            "j"
+            "b"
+            "f";
+    }
+    
+    article{
+        grid-template-columns: 2fr 2fr;
+    }
+    
+}
+
